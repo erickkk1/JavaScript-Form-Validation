@@ -1,0 +1,69 @@
+<!-- Prgrammer: Eric Claudsat-->
+<!-- Date:02/20/2019-->
+<!-- Project:Form validation with Javascript-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+<!-- This condition validate  first name filed  -->
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Please! first Name must be filled out");
+    return false;
+	}
+<!-- This condition validate  Last name filed  -->
+  var y = document.forms["myForm"]["lname"].value;
+  if (y == "") {
+    alert("Please! last Name must be filled out");
+    return false;
+	}
+	<!-- This condition validate  Email address filed  -->
+	var z = document.forms["myForm"]["EmailAddress"].value;
+  if (z == "") {
+    alert("Please! email address must be filled out");
+    return false;
+	
+	}
+}
+
+
+</script>
+</head>
+<!-- This centers "Customer information" in the form -->
+<style>
+
+h1 {text-align:center;}
+p {text-align:center;}
+</style>
+</head>
+
+<!-- This add a powderblue background to the form -->
+<body style="background-color:lightgreen;">
+
+<!-- This add a blue backgroung color to  Customer information  -->
+<h1 style="background-color:DodgerBlue;">Customer information</h1>
+<p></p>
+
+<form name="myForm"  onsubmit="return validateForm()" method="post">
+ 
+ <!-- This add a group box to the form -->
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="fname">
+    <br>
+    Last name:<br>
+    <input type="text" name="lname">
+	<br>
+	Email Address:<br>
+	<input type="text" name="EmailAddress">
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+</body>
+</html>
